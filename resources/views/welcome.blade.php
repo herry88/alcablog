@@ -815,7 +815,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 
 		});
 	</script>
-	<!-- //Banner text  Responsiveslides -->
+	<!-- //Banner text  Responsiveslides adfafadsfdsafa-->
 	<!-- start-smooth-scrolling -->
 	<script src="{{ URL::asset('assets/js/move-top.js') }}"></script>
 	<script src="{{ URL::asset('assets/js/easing.js') }}"></script>

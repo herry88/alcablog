@@ -25,4 +25,27 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+
+
+    public function indexBerita()
+    {
+        return view('berita.index');
+    }
+    public function indexKontak()
+    {
+        return view('kontak.index');
+    }
+    public function indexPortopolio()
+    {
+        return view('portopolio.index');
+    }
+    public function indexTeam()
+    {
+        return view('team.index');
+    }
+    public function indexCategori()
+    {
+        return view('categori.index');
+    }
 }
