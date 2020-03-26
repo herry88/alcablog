@@ -10,15 +10,15 @@
     <title>Alca</title>
     <link rel="stylesheet" href="/ninja/light/assets/styles/style.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
     <!-- mCustomScrollbar -->
     <link rel="stylesheet" href="/ninja/light/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
 
     <!-- Waves Effect -->
     <link rel="stylesheet" href="/ninja/light/assets/plugin/waves/waves.min.css">
 
-    <!-- Sweet Alert -->
-    <link rel="stylesheet" href="/ninja/light/assets/plugin/sweet-alert/sweetalert.css">
-    
+  
     <!-- Color Picker -->
     <link rel="stylesheet" href="/ninja/light/assets/color-switcher/color-switcher.min.css">
 
@@ -39,8 +39,6 @@
     <!-- Waves Effect -->
     <link rel="stylesheet" href="/ninja/light/assets/plugin/waves/waves.min.css">
 
-    <!-- Sweet Alert -->
-    <link rel="stylesheet" href="/ninja/light/assets/plugin/sweet-alert/sweetalert.css">
     
     <!-- Percent Circle -->
     <link rel="stylesheet" href="/ninja/light/assets/plugin/percircle/css/percircle.css">
@@ -152,6 +150,7 @@
 </div>
 <!-- /.fixed-navbar -->
 <!-- #color-switcher -->
+@include('sweet::alert')
 @yield('content')
 <!--/#wrapper -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -167,7 +166,6 @@
     <script src="/ninja/light/assets/plugin/bootstrap/js/bootstrap.min.js"></script>
     <script src="/ninja/light/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/ninja/light/assets/plugin/nprogress/nprogress.js"></script>
-    <script src="/ninja/light/assets/plugin/sweet-alert/sweetalert.min.js"></script>
     <script src="/ninja/light/assets/plugin/waves/waves.min.js"></script>
     <!-- Full Screen Plugin -->
     <script src="/ninja/light/assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
@@ -190,7 +188,7 @@
     <script src="/ninja/light/assets/scripts/main.min.js"></script>
     <script src="/ninja/light/assets/color-switcher/color-switcher.min.js"></script>
 
-
+    
     <script src="/ninja/light/assets/1.js"></script>
     <script src="/ninja/light/assets/2.js"></script>
     <script src="/ninja/light/assets/3.js"></script>
@@ -217,56 +215,10 @@
     <script src="/ninja/light/assets/plugin/bootstrap/js/bootstrap.min.js"></script>
     <script src="/ninja/light/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/ninja/light/assets/plugin/nprogress/nprogress.js"></script>
-    <script src="/ninja/light/assets/plugin/sweet-alert/sweetalert.min.js"></script>
     <script src="/ninja/light/assets/plugin/waves/waves.min.js"></script>
     <!-- Full Screen Plugin -->
     <script src="/ninja/light/assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
-
-    <script src="/ninja/light/assets/scripts/sweetalert.init.min.js"></script>
+    @yield('js')
 </body>
 </html>
 
-<script type="text/javascript"> 
-    $(document).ready(function () {
-        $('#table-datatables').DataTable({
-            dom: 'Bfrtip',
-            buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
-        });
-    });
-</script>
-
-
-<script type="text/javascript">
-    var elems = document.getElementsByClassName('hapus');
-    var confirmIt = function (e) {
-        if (!confirm('Apakah Anda Yakin Ingin Menghapus nya?')) e.preventDefault();
-    };
-    for (var i = 0, l = elems.length; i < l; i++) {
-        elems[i].addEventListener('click', confirmIt, false);
-    }
-</script>
-
-<script type="text/javascript">
-                         function readURL2(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        $('#blah2')
-                            .attr('src', e.target.result);
-                    };
-                    reader.readAsDataURL(input.files[0]);
-                    }
-                }
-            </script>
-<script type="text/javascript">
-                         function readURL3(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        $('#blah3')
-                            .attr('src', e.target.result);
-                    };
-                    reader.readAsDataURL(input.files[0]);
-                    }
-                }
-            </script>

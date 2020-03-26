@@ -17,7 +17,6 @@ class CategoryController extends Controller
     public function index()
     {
         $category = Category::all();
-        Alert::success('pesan yang ingin disampaikan', 'Judul Pesan');
         return view('categori.index', \compact('category'));
     }
 
@@ -41,10 +40,12 @@ class CategoryController extends Controller
     {
         
         // Category::create($request->all());
+
         $d = New Category;
         $d->name = $request->name;
-        // $d->save();
-        dd($d);
+        $d->save();
+        Alert::message('Thanks for comment!')->persistent('Close');
+
         return redirect()->route('category.index');
     }
 

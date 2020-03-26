@@ -1,6 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
+
+
 <div class="modal fade" id="modaladd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -61,6 +63,9 @@
 
 
 <div id="wrapper">
+
+ 
+ 
     <div class="main-content">
         <div class="row small-spacing">
 
@@ -72,6 +77,7 @@
   <h1 class="h3 mb-2 text-gray-800"></h1>
   <a target="_blank"></a>
   <!-- DataTales Example -->
+ 
   <div class="card shadow mb-4">
     <div class="card-header-index" style="display: flex; justify-content: space-between; align-items: center;">
       <h6 class="m-0 font-weight-bold"><strong>Data Kategori</strong></h6>
@@ -92,7 +98,7 @@
             </tr>
           </thead>
           <tbody>
-            @forelse ($errors as $cat)
+            @forelse ($category as $cat)
             <tr>
               <td>{{ $loop->iteration }}</td>
               <td>{{ $cat->name }}</td>
@@ -125,3 +131,4 @@
 </div>
 
 @endsection
+
