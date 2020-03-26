@@ -29,3 +29,4 @@ Route::get('/team', 'HomeController@indexTeam')->name('team');
 Route::get('/categori', 'HomeController@indexCategori')->name('categori');
 
 Route::resource('post', 'PostController');
+Route::resource('category', 'CategoryController');

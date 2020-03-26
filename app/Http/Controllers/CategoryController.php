@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
+use Alert;
+// use Validate;
 
 class CategoryController extends Controller
 {
@@ -14,7 +16,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $category = Category::all();
+        return view('categori.index', \compact('category'));
     }
 
     /**
@@ -24,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        \abort(404);
     }
 
     /**
@@ -35,7 +38,15 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        // Category::create($request->all());
+
+        $d = New Category;
+        $d->name = $request->name;
+        $d->save();
+        Alert::message('Thanks for comment!')->persistent('Close');
+
+        return redirect()->route('category.index');
     }
 
     /**
