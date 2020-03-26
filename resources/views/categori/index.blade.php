@@ -98,7 +98,7 @@
             </tr>
           </thead>
           <tbody>
-            @forelse ($category as $cat)
+            @forelse ($errors as $cat)
             <tr>
               <td>{{ $loop->iteration }}</td>
               <td>{{ $cat->name }}</td>
@@ -132,3 +132,13 @@
 
 @endsection
 
+@section('js')
+    <script>
+      swal({
+        title: "Good job!",
+        text: "You clicked the button!",
+        icon: "success",
+        button: "Aww yiss!",
+      });
+    </script>
+@endsection
