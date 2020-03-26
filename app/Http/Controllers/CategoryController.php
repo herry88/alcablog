@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
+use Alert;
+// use Validate;
 
 class CategoryController extends Controller
 {
@@ -15,6 +17,7 @@ class CategoryController extends Controller
     public function index()
     {
         $category = Category::all();
+        Alert::success('pesan yang ingin disampaikan', 'Judul Pesan');
         return view('categori.index', \compact('category'));
     }
 
@@ -36,11 +39,13 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        // echo 'store';
-        $input = $this->validate([
-            'name'=>$request->name,
-        ]);
         
+        // Category::create($request->all());
+        $d = New Category;
+        $d->name = $request->name;
+        // $d->save();
+        dd($d);
+        return redirect()->route('category.index');
     }
 
     /**
