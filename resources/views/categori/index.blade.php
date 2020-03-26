@@ -11,33 +11,15 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="/kategori/add" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('category.store') }}" method="POST" enctype="multipart/form-data">
           @csrf
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Kategori</label>
-            <input type="text" class="form-control" name="nama" id="recipient-name" required="">
+            <label for="recipient-name" class="col-form-label">Name</label>
+            <input type="text" class="form-control" name="name" id="recipient-name" required>
           </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Kategori</label>
-            <input type="text" class="form-control" name="nama" id="recipient-name" required="">
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Kategori</label>
-            <input type="text" class="form-control" name="nama" id="recipient-name" required="">
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Kategori</label>
-            <input type="text" class="form-control" name="nama" id="recipient-name" required="">
-          </div>
-          <div class="form-group">
-          <label for="recipient-name" class="col-form-label">Foto</label>
-          <input class="form-control" type="file" name="foto" onchange="readURL2(this);">
-                      <center><br>
-                          <div class="form-group col-md-12">
-                              <img src="/ninja/default.png" alt="Nature" class="responsive" id="blah2" style="width: 300px;height: 300px; margin-left: 20px; border-radius: 50%;">
-                          </div>
-                      </center>
-          </div>
+          
+         
+          
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">Tambah</button>
@@ -66,28 +48,6 @@
             <label for="recipient-name" class="col-form-label">Nama Kategori</label>
             <input type="text" class="form-control" name="nama" id="recipient-name" value="#" required="">
           </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nama Kategori</label>
-            <input type="text" class="form-control" name="nama" id="recipient-name" value="#" required="">
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nama Kategori</label>
-            <input type="text" class="form-control" name="nama" id="recipient-name" value="#" required="">
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nama Kategori</label>
-            <input type="text" class="form-control" name="nama" id="recipient-name" value="#" required="">
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Foto</label>
-            <input class="form-control" type="file" name="foto" onchange="readURL3(this);" value="#">
-                <center><br>
-                    <div class="form-group col-md-12">
-                        <img src="#" alt="Nature" class="responsive" id="blah3" style="width: 300px;height: 300px; margin-left: 20px; border-radius: 50%;">
-                    </div>
-                </center>
-          </div>
-
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">Edit</button>
@@ -127,21 +87,15 @@
           <thead>
             <tr>
               <th>NO</th>
-              <th>#</th>
-              <th>#</th>
-              <th>#</th>
-              <th>#</th>
+              <th>Nama Kategori</th>
               <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            
+            @forelse ($errors as $cat)
             <tr>
-              <td>#</td>
-              <td>#</td>
-              <td>#</td>
-              <td>#</td>
-              <td>#</td>
+              <td>{{ $loop->iteration }}</td>
+              <td>{{ $cat->name }}</td>
               <td>
                 <a data-toggle="modal" data-target="#EditJurusan" class="btn btn-warning btn-sm waves-effect waves-light">
                   <i class="far fa-edit"></i>
@@ -151,7 +105,11 @@
                 </a>
               </td>
             </tr>
-            
+            @empty
+                <tr>
+                  <td colspan="3" class="text-center">Tidak Ada Data</td>
+                </tr>
+            @endforelse
           </tbody>
         </table>
       </div>
