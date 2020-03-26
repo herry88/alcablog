@@ -13,8 +13,8 @@
                             <h3 class="title">Category</h3>
                             <!-- .title -->
                             <ul class="child-list">
-                                <li><a href="ui-buttons.html">Add Category</a></li>
-                                <li><a href="ui-cards.html">ListCategory</a></li>
+                                <li><a href="{{ route('category.create') }}">Add Category</a></li>
+                                <li><a href="{{ route('category.index') }}">ListCategory</a></li>
                             </ul>
                             <!-- /.child-list -->
                         </li>
