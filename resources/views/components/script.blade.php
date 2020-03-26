@@ -1,4 +1,4 @@
- URL::asset('') <!-- Placed at  URL::asset('') the end of the document so the pages load faster -->
+<!-- Placed at  URL::asset('') the end of the document so the pages load faster -->
 <script src="{{ URL::asset('assets/scripts/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('assets/scripts/modernizr.min.js') }}"></script>
 <script src="{{ URL::asset('assets/plugin/bootstrap/js/bootstrap.min.js') }}"></script>
