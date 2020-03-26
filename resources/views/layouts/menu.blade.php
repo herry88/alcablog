@@ -7,29 +7,24 @@
                     <a href="index.html"><i class="ico fa fa-home"></i><span>Dashboard</span></a>
                 </li>
                 <li class="has-sub">
-                    <a href="#"><i class="ico fa fa-adjust"></i><span>User Interface</span></a>
+                    <a href="#"><i class="ico fa fa-adjust"></i><span>Master Data</span></a>
                     <ul class="sub-menu mega mega-3">
                         <li class="has-sub">
-                            <h3 class="title">Components</h3>
+                            <h3 class="title">Category</h3>
                             <!-- .title -->
                             <ul class="child-list">
-                                <li><a href="ui-buttons.html">Buttons</a></li>
-                                <li><a href="ui-cards.html">Cards</a></li>
-                                <li><a href="ui-checkbox-radio.html">Checkboxs-Radios</a></li>
-                                <li><a href="ui-draggable-cards.html">Draggable Cards</a></li>
-                                <li><a href="ui-components.html">UI Components</a></li>
+                                <li><a href="ui-buttons.html">Add Category</a></li>
+                                <li><a href="ui-cards.html">ListCategory</a></li>
                             </ul>
                             <!-- /.child-list -->
                         </li>
                         <li class="has-sub">
-                            <h3 class="title">Icons</h3>
+                            <h3 class="title">Posting</h3>
                             <!-- .title -->
                             <ul class="child-list">
-                                <li><a href="icons-font-awesome-icons.html">Font Awesome</a></li>
-                                <li><a href="icons-fontello.html">Fontello</a></li>
-                                <li><a href="icons-material-icons.html">Material Design Icons</a></li>
-                                <li><a href="icons-material-design-iconic.html">Material Design Iconic Font</a></li>
-                                <li><a href="icons-themify-icons.html">Themify Icons</a></li>
+                                <li><a href="icons-font-awesome-icons.html">Add Posting</a></li>
+                                <li><a href="icons-fontello.html">List Posting</a></li>
+                                
                             </ul>
                             <!-- /.child-list -->
                         </li>
@@ -37,18 +32,18 @@
                             <h3 class="title">Others</h3>
                             <!-- .title -->
                             <ul class="child-list">
-                                <li><a href="ui-modals.html">Modals</a></li>
-                                <li><a href="ui-range-slider.html">Range Slider</a></li>
-                                <li><a href="ui-sweetalert.html">Sweet Alert</a></li>
-                                <li><a href="ui-treeview.html">Tree view</a></li>
-                                <li><a href="ui-typography.html">Typography</a></li>
+                                <li><a href="ui-modals.html">Portofolio</a></li>
+                                <li><a href="ui-range-slider.html">Client</a></li>
+                                <li><a href="ui-sweetalert.html">ContactList</a></li>
+                                <li><a href="ui-treeview.html">Testimonial</a></li>
+                                <li><a href="ui-typography.html">AboutUs</a></li>
                             </ul>
                             <!-- /.child-list -->
                         </li>
                     </ul>
                     <!-- /.sub-menu mega -->
                 </li>
-                <li class="has-sub">
+                {{-- <li class="has-sub">
                     <a href="#"><i class="ico fa fa-bar-chart"></i><span>Charts</span></a>
                     <ul class="sub-menu single">
                         <li><a href="chart-3d.html">3D Charts</a></li>
@@ -137,7 +132,8 @@
                         </li>
                     </ul>
                     <!-- /.sub-menu mega -->
-                </li>
+                </li> --}}
+                <li class="current">Logout</li>
         </ul>
         <!-- /.menu -->
     </div>
