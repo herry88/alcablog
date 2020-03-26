@@ -63,7 +63,7 @@
 
 
 <div id="wrapper">
-
+ 
  
  
     <div class="main-content">
@@ -88,6 +88,16 @@
         </a>
     </div><br>
     <div class="card-body">
+      @if (session('success'))
+        <script>
+          swal({
+            title: "Good job!",
+            message: "{{ session('success') }}",
+            icon: "success",
+            button: "OK!",
+          });
+        </script>
+      @endif
       <div class="table-responsive">
         <table class="table table-bordered" id="Table" width="100%" cellspacing="0">
           <thead>
@@ -132,13 +142,3 @@
 
 @endsection
 
-@section('js')
-    <script>
-      swal({
-        title: "Good job!",
-        text: "You clicked the button!",
-        icon: "success",
-        button: "Aww yiss!",
-      });
-    </script>
-@endsection

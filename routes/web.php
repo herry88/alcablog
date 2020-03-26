@@ -30,3 +30,5 @@ Route::get('/categori', 'HomeController@indexCategori')->name('categori');
 
 Route::resource('post', 'PostController');
 Route::resource('category', 'CategoryController');
+
+Route::resource('test', 'TesController');
