@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
-use Alert;
+// use Alert;
 // use Validate;
 
 class CategoryController extends Controller
@@ -16,8 +16,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $d['errors'] = Category::all();
-        return view('categori.index', $d);
+        $d['category'] = Category::all();
+        return view('category.index', $d);
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        \abort(404);
+        return view('category.create');
     }
 
     /**
@@ -40,13 +40,13 @@ class CategoryController extends Controller
     {
         
         // Category::create($request->all());
-
         $d = New Category;
         $d->name = $request->name;
         $d->save();
         // Alert::message('Thanks for comment!')->persistent('Close');
 
-        return redirect()->route('category.index')->with('success'. $request->name );
+        return redirect()->route('category.index')->withSuccess('success');
+        
     }
 
     /**
