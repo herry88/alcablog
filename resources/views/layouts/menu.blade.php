@@ -4,7 +4,7 @@
         
         <ul class="menu">
                 <li>
-                    <a href="index.html"><i class="ico fa fa-home"></i><span>Dashboard</span></a>
+                    <a href="{{ route('home') }}"><i class="ico fa fa-home"></i><span>Dashboard</span></a>
                 </li>
                 <li class="has-sub">
                     <a href="#"><i class="ico fa fa-adjust"></i><span>Master Data</span></a>
