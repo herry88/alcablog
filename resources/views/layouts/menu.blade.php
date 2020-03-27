@@ -22,8 +22,8 @@
                             <h3 class="title">Posting</h3>
                             <!-- .title -->
                             <ul class="child-list">
-                                <li><a href="icons-font-awesome-icons.html">Add Posting</a></li>
-                                <li><a href="icons-fontello.html">List Posting</a></li>
+                                <li><a href="{{ route('post.create') }}">Add Posting</a></li>
+                                <li><a href="{{ route('post.index') }}">List Posting</a></li>
                                 
                             </ul>
                             <!-- /.child-list -->
