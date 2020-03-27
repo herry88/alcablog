@@ -1,12 +1,10 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'FrontEndController@all')->name('working');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
@@ -23,4 +21,4 @@ Route::resource('post', 'PostController');
 
 Route::resource('category', 'CategoryController');
 
-Route::resource('test', 'TesController');
+Route::resource('working', 'WorkingController');

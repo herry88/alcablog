@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="zxx">
 
 <head>
-	<title>Precedence Corporate Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+	<title>AlcaSoft</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="keywords" content="Precedence Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -42,7 +42,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<div class="header-top text-md-left text-center">
 				<div class="container">
 					<div class="d-md-flex justify-content-between">
-						<p class="text-capitalize">if you have any question? Call Us +12 345 678 </p>
+						<p class="text-capitalize">if you have any question? Call Us +62896-6786-7330 </p>
 						<ul class="social-iconsv2 agileinfo mt-md-0 mt-2">
 							<li class="ml-lg-5">
 								<a href="#">
@@ -74,7 +74,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="container">
 						<h1>
 							<a class="navbar-brand" href="index.html">
-								Precedence
+								AlcaSoft
 								<span>improving lives</span>
 							</a>
 						</h1>
@@ -82,102 +82,17 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						    aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
-						<div class="collapse navbar-collapse navbar-toggle" id="navbarNavAltMarkup1">
-							<div class="navbar-nav secondfix ml-lg-auto">
-								<ul class="navbar-nav text-center">
-									<li class="nav-item active  mr-3">
-										<a class="nav-link" href="index.html">Home
-											<span class="sr-only">(current)</span>
-										</a>
-									</li>
-									<li class="nav-item  mr-3">
-										<a class="nav-link scroll" href="#about">about</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link scroll" href="#services">services</a>
-									</li>
-									<li class="nav-item dropdown mr-3">
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-										    aria-expanded="false">
-											Dropdown
-										</a>
-										<div class="dropdown-menu text-lg-left text-center" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item scroll nav-link" href="#explorey">Explore</a>
-											<a class="dropdown-item scroll nav-link" href="#blog">Blog</a>
-											<div class="dropdown-divider"></div>
-											<a class="dropdown-item scroll nav-link" href="#testi">Testimonials</a>
-										</div>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link scroll" href="#contact">contact</a>
-									</li>
-								</ul>
-							</div>
-						</div>
+						@include('frontend.header.menu')
 					</div>
 				</nav>
 			</header>
 		</section>
 		<!-- //header -->
 		<!-- banner -->
-		<div class="banner">
-			<div class="container">
-				<div class="banner-text-agile">
-					<div class="row">
-						<div class="col-lg-8">
-							<!-- Carousel -->
-							<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-								<ol class="carousel-indicators">
-									<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-									<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-									<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-								</ol>
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<h3 class="b-w3ltxt text-capitalize mt-md-4">
-											<span>this is</span> salient</h3>
-										<p class="mt-2">onec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus semper.</p>
-										<a class="btn btn-banner mt-md-3 mt-2 text-capitalize scroll" href="#services" role="button">explore services</a>
-									</div>
-									<!-- slider text -->
-									<div class="carousel-item">
-										<h3 class="b-w3ltxt text-capitalize mt-md-4">
-											<span>successful </span>careers</h3>
-										<p class="mt-2">onec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus semper.</p>
-										<a class="btn btn-banner mt-md-3 mt-2 text-capitalize scroll" href="#services" role="button">explore services</a>
-									</div>
-									<!-- slider text -->
-									<div class="carousel-item text-white">
-										<h3 class="b-w3ltxt  text-capitalize mt-md-4">
-											<span>expert</span> consultants</h3>
-										<p class="mt-2">onec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus semper.</p>
-										<a class="btn btn-banner mt-md-3 mt-2 text-capitalize scroll" href="#services" role="button">explore services</a>
-									</div>
-									<!-- slider text -->
-								</div>
-							</div>
-							<!-- Carousel -->
-						</div>
-						<div class="offset-lg-4"></div>
-					</div>
-				</div>
-			</div>
-		</div>
+		@include('frontend.banner.banner')
 		<!-- //banner -->
 		<!-- banner bottom -->
-		<div class="serv_bottom py-sm-5 py-3">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8">
-						<h4 class="agile-ser_bot text-light text-capitalize">Sed mi tortor, commodo a felis in fringilla.</h4>
-						<p class="text-secondary">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-					</div>
-					<div class="col-lg-4 my-lg-auto mt-3 text-lg-right">
-						<a href="#services" class="text-capitalize serv_link btn scroll">view services</a>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 		<!-- //banner-bottom -->
 		<!-- about-->
 		<section class="wthree-row py-sm-5" id="about">
@@ -215,7 +130,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="row py-lg-5">
 						<!-- Table #1  -->
-						<div class="col-lg-4">
+						<div class="col-lg-4 my-lg-0 my-5">
 							<div class="w3ls-pricing card">
 								<div class="card-header">
 									<h4 class="serv-title">
@@ -309,63 +224,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</section>
 		<!-- //sub services -->
 		<!-- testimonials-->
-		<div class="testimonials" id="testi">
-			<div class="container">
-				<div class="banner-text text-center">
-					<h3 class="stat-title">what our clients say
-					</h3>
-					<div class="callbacks_container">
-						<ul class="rslides" id="slider3">
-							<li>
-								<div class="testi-agile">
-									<p>
-										<span>"</span>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada
-										feugiat.Nulla quis lorem ut libero malesuada feugiat. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor
-										sit amet, consectetur adipiscing elit
-										<span>"</span>
-									</p>
-									<div class="testi-pos">
-										<img src="images/ts1.jpg" alt="" class="img-fluid rounded-circle" />
-										<h4>arim john</h4>
-										<span>congue leo</span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="testi-agile">
-									<p>
-										<span>"</span>Donec rutrum congue leo eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada
-										feugiat.Nulla quis lorem ut libero malesuada feugiat. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor
-										sit amet, consectetur adipiscing elit
-										<span>"</span>
-									</p>
-									<div class="testi-pos">
-										<img src="{{URL::asset('assets/images/ts2.jpg')}}" alt="" class="img-fluid rounded-circle" />
-										<h4>john arim</h4>
-										<span>lacinia eget</span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="testi-agile">
-									<p>
-										<span>"</span>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada
-										feugiat.Nulla quis lorem ut libero malesuada feugiat. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor
-										sit amet, consectetur adipiscing elit
-										<span>"</span>
-									</p>
-									<div class="testi-pos">
-										<img src="{{URL::asset('assets/images/ts3.jpg')}}" alt="" class="img-fluid rounded-circle" />
-										<h4>john arim</h4>
-										<span>Donec rutru</span>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 		<!-- //testimonials -->
 		<!-- branches -->
 		<section class="py-5 branches position-relative" id="explore">
@@ -699,11 +558,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<h5>about us</h5>
 						<h2>
 							<a href="index.html">
-								Precedence
+								AlcaSoft
 								<span>improving lives</span>
 							</a>
 						</h2>
-						<p class="mt-3">Nulla quis lorem ut libermalesuada ultrices posuere cubilia feugiatrice praesent sapien massa</p>
+						<p class="mt-3"></p>
 					</div>
 					<div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
 						<h5>Quick links</h5>
@@ -731,22 +590,22 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						</ul>
 					</div>
 					<div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
-						<h5>working hours</h5>
+						<h5>Working hours</h5>
 						<ul class="list-unstyled quick-links">
 							<li>
-								Monday - Friday
+								{{ $working[0]->name }}
 								<br>
-								<span>9.00 - 20.00</span>
+								<span>{{ $working[0]->hour }}</span>
 							</li>
 							<li>
-								Saturday
+								{{ $working[1]->name }}
 								<br>
-								<span> 10.00 - 16.00 </span>
+								<span> {{ $working[1]->hour }} </span>
 							</li>
 							<li>
-								Sunday
+								{{ $working[2]->name }}
 								<br>
-								<span> 9.30 - 18.00 </span>
+								<span> {{ $working[2]->hour }} </span>
 							</li>
 						</ul>
 					</div>
@@ -772,7 +631,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</footer>
 		<div class="cpy-right text-center py-4">
-			<p>© 2018 Precedence. All rights reserved | Design by
+			<p>© @php
+				echo date('Y');
+			@endphp AlcaSoft. All rights reserved | Design by
 				<a href="http://w3layouts.com"> W3layouts.</a>
 			</p>
 		</div>
