@@ -25,7 +25,7 @@
                         <tr>
                             <td>Category</td>
                             <td>
-                                <select name="category_id" class="form-control">
+                                <select name="category_id" class="form-control" required>
                                     <option value="0">&mdash;</option>
                                     @foreach ($category as $c)
                                         <option value="{{ $c->id }}">{{ $c->name }}</option>
@@ -35,11 +35,11 @@
                         </tr>
                         <tr>
                             <td>Images</td>
-                            <td><input type="file" name="images" class="form-control"></td>
+                            <td><input type="file" name="photo" class="form-control" required></td>
                         </tr>
                         <tr>
                             <td>Description</td>
-                            <td><textarea name="description" class="form-control" cols="30" rows="10"></textarea></td>
+                            <td><textarea name="description" required class="form-control" cols="30" rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>

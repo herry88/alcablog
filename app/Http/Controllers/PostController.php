@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Category;
+use File;
+use Image;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -40,7 +42,41 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'name'=>'required',
+            'file'=>'required',
+            'description'=>'required'
+        ]);
+
+        try{
+            $photo = null;
+            if($request->hasFile('photo')){
+                $photo = $this->saveFile($request->name, $request->file('photo'));
+            }
+
+            //simpan data ke dalam table products
+            $post = Post::create([
+                'name' => $request->name,
+                'category_id' => $request->category_id,
+                'images'=>$photo,
+                'description'=> $request->description
+            ]);
+            return \redirect(route('post.index'))->withSuccess('Berhasil', $request->name);
+        } catch(\Exception $e ){
+            return \redirect()->back()->with(['error' => $e->getMessage()]);
+        }
+    }
+
+    private function saveFile($name, $photo)
+    {
+        $images = str_slug($name) . time() . '.' . $photo->getClientOriginalExtension();
+        $path = public_path('uploads/post');
+
+        if (!File::isDirectory($path)) {
+            File::makeDirectory($path, 0777, true, true);
+        } 
+        Image::make($photo)->save($path . '/' . $images);
+        return $images;
     }
 
     /**
