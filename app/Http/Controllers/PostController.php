@@ -58,12 +58,13 @@ class PostController extends Controller
             $post = Post::create([
                 'name' => $request->name,
                 'category_id' => $request->category_id,
-                'images'=>$photo,
+                'images' => $photo,
                 'description'=> $request->description
             ]);
-            return \redirect(route('post.index'))->withSuccess('Berhasil', $request->name);
+            dd($post);
+            // return \redirect(route('post.index'))->withSuccess('Berhasil', $request->name);
         } catch(\Exception $e ){
-            return \redirect()->back()->with(['error' => $e->getMessage()]);
+            // return \redirect()->back()->with(['error' => $e->getMessage()]);
         }
     }
 
