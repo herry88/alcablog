@@ -9,6 +9,6 @@
        //location.reload();
      }).catch(swal.noop);
  </script>
-@elseif()
+
  
 @endif
