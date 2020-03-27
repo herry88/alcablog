@@ -1,4 +1,4 @@
-<!doctype html>
+{{-- <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -77,4 +77,39 @@
         </main>
     </div>
 </body>
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="Web Company Profile, Jasa Pembuatan Aplikasi">
+	<meta name="author" content="Herry Prasetyo">
+
+	<title>Home</title>
+	<link rel="stylesheet" href="{{ URL::asset('assets/styles/style.min.css') }}">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="{{ URL::asset('assets/plugin/waves/waves.min.css') }}">
+
+</head>
+
+<body>
+
+<div id="single-wrapper">
+	@yield('content')
+	<!-- /.frm-single -->
+</div><!--/#single-wrapper -->
+
+	<script src="{{ URL::asset('assets/scripts/jquery.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/scripts/modernizr.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/plugin/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/plugin/nprogress/nprogress.js') }}"></script>
+	<script src="{{ URL::asset('assets/plugin/waves/waves.min.js') }}"></script>
+
+	<script src="{{ URL::asset('assets/scripts/main.min.js') }}"></script>
+</body>
 </html>
+

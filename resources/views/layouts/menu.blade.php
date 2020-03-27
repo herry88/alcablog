@@ -4,7 +4,7 @@
         
         <ul class="menu">
                 <li>
-                    <a href="index.html"><i class="ico fa fa-home"></i><span>Dashboard</span></a>
+                    <a href="{{ route('home') }}"><i class="ico fa fa-home"></i><span>Dashboard</span></a>
                 </li>
                 <li class="has-sub">
                     <a href="#"><i class="ico fa fa-adjust"></i><span>Master Data</span></a>
@@ -22,8 +22,8 @@
                             <h3 class="title">Posting</h3>
                             <!-- .title -->
                             <ul class="child-list">
-                                <li><a href="icons-font-awesome-icons.html">Add Posting</a></li>
-                                <li><a href="icons-fontello.html">List Posting</a></li>
+                                <li><a href="{{ route('post.create') }}">Add Posting</a></li>
+                                <li><a href="{{ route('post.index') }}">List Posting</a></li>
                                 
                             </ul>
                             <!-- /.child-list -->

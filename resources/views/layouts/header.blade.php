@@ -24,12 +24,12 @@
 					<a href="#" class="ico-item fa fa-user js__toggle_open" data-target="#user-status"></a>
 					<div id="user-status" class="user-status js__toggle">
 						<a href="#" class="avatar"><img src="http://placehold.it/80x80" alt=""><span class="status online"></span></a>
-						<h5 class="name"><a href="profile.html">Emily Stanley</a></h5>
-						<h5 class="position">Administrator</h5>
+						<h5 class="name"><a href="#">{{ Auth::user()->name }}</a></h5>
+						<h5 class="position">{{ Auth::user()->email }}</h5>
 						<!-- /.name -->
 						<div class="control-items">
 							<div class="control-item"><a href="#" title="Settings"><i class="fa fa-gear"></i></a></div>
-							<div class="control-item"><a href="#" class="js__logout" title="Log out"><i class="fa fa-power-off"></i></a></div>
+							<div class="control-item"><a href="{{ route('logout') }}" class="fa fa-logout" title="Log out"><i class="fa fa-power-off"></i></a></div>
 						</div>
 						<!-- /.control-items -->
 					</div>

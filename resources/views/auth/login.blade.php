@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -69,5 +69,30 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
+
+<form action="{{ route('login') }}" method="POST" class="frm-single">
+    @csrf
+
+    <div class="inside">
+        <div class="title"><strong>AlcaSoft</strong>Admin</div>
+        <!-- /.title -->
+        <div class="frm-title">Login</div>
+        <!-- /.frm-title -->
+        <div class="frm-input"><input type="email" placeholder="Email" class="frm-inp @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus><i class="fa fa-user frm-ico"></i></div>
+        <!-- /.frm-input -->
+        <div class="frm-input"><input type="password" placeholder="Password" class="frm-inp @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"><i class="fa fa-lock frm-ico"></i></div>
+        <!-- /.frm-input -->
+       
+        <button type="submit" class="frm-submit">Login<i class="fa fa-arrow-circle-right"></i></button>
+        
+        <!-- /.row -->
+        {{-- <a href="page-register.html" class="a-link"><i class="fa fa-key"></i>New to NinjaAdmin? Register.</a> --}}
+        <div class="frm-footer">AlcaSoft © @php
+            echo date('Y');
+        @endphp.</div>
+        <!-- /.footer -->
+    </div>
+    <!-- .inside -->
+</form>
 @endsection
