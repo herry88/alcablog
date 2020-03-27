@@ -66,9 +66,10 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
-        //
+        $category = Category::findOrfail($id);
+        return view('category.edit', \compact('category'));
     }
 
     /**
@@ -78,9 +79,21 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required'
+        ]);
+
+        try{
+            $category = Category::findOrfail($id);
+            $category->update([
+                'name' => $request->name
+            ]);
+            return redirect()->route('category.index')->withSuccess('Succes Update');
+        } catch(\Exception $e){
+            return \redirect()->back()->withFail('Error', $e->getMessage());
+        }
     }
 
     /**
@@ -89,8 +102,10 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy($id)
     {
-        //
+        $category = Category::findOrfail($id);
+        $category->delete();
+        return \redirect()->route('category.index')->withSuccess('success', $category->name);
     }
 }
