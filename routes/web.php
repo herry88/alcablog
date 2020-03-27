@@ -17,6 +17,8 @@ Route::get('/portopolio', 'HomeController@indexPortopolio')->name('portopolio');
 Route::get('/team', 'HomeController@indexTeam')->name('team');
 Route::get('/categori', 'HomeController@indexCategori')->name('categori');
 
+Route::get('logout','Auth\LoginController@logout')->name('logout');
+
 Route::resource('post', 'PostController');
 
 Route::resource('category', 'CategoryController');
