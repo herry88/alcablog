@@ -47,7 +47,14 @@
                       @endif
                     </td>
                     <td>{{ $pt->description }}</td>
-                    <td>&nbsp;</td>
+                    <td>
+                      <form action="{{ route('post.destroy', $pt->id) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <a href="{{ route('post.edit', $pt->id) }}" class="btn btn-warning" title="Edit"><i class="fa fa-edit"></i></a>
+                        <button type="submit" class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i></button>
+                      </form>
+                    </td>
                   </tr>
               @endforeach
           </tbody>

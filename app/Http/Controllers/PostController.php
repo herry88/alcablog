@@ -92,7 +92,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        \abort(404);
     }
 
     /**
@@ -101,9 +101,11 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        $category = Category::orderBy('name','DESC')->get();
+        return view('post.edit', \compact('category','post'));
     }
 
     /**
@@ -113,9 +115,33 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'name'=>'required',
+            'category_id'=>'required',
+            'images' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+            'description'=>'required'
+        ]);
+
+        try{
+            $post = Post::findOrFail($id);
+            $images = $post->images;
+            if($request->hasFile('images')){
+                !empty($images) ? File::delete(public_path('uploads/post/' . $images)):null;
+                $images = $this->saveFile($request->name, $request->file('images'));
+            }
+            $post->update([
+                'name' => $request->name,
+                'category_id'=> $request->category_id,
+                'images' => $images,
+                'description'=> $request->description
+            ]);
+            return redirect()->route('post.index')->with('Success');
+        } catch(\Exception $e){
+            return redirect()->back()->with('Error', $e->getMessage());
+        }
+
     }
 
     /**
@@ -124,8 +150,13 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        if(!empty($post->images)){
+            File::delete(\public_path('uploads/post/' . $post->images));
+        }
+        $post->delete();
+        return \redirect()->back()->withSuccess('Delete Success');
     }
 }
