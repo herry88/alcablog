@@ -64,7 +64,7 @@ class PostController extends Controller
                 'images' => $photo,
                 'description'=> $request->description
             ]);
-            dd($post);
+            // dd($post);
             return \redirect(route('post.index'))->withSuccess('Berhasil', $request->name);
         } catch(\Exception $e ){
             return \redirect()->back()->with(['error' => $e->getMessage()]);
