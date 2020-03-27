@@ -7,25 +7,29 @@
 @section('content')
 <div class="row small-spacing">
     <div class="col-md-10">
-        @if(Session::has('success'))
-            <div class="alert alert-success">
-                {{Session::get('success')}}
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
         @endif
         <div class="box-content">
             <h4>Add Posting</h4>
-            <form action="{{ route('post.store') }}" method="POST">
+            <form action="{{ route('post.store') }}" enctype="multipart/form-data" method="POST">
                 @csrf
-                @method('POST')
+                
                     <table class="table table-bordered"> 
                         <tr>
                             <td>Name</td>
-                            <td><input type="text" name="name" required placeholder="Name" class="form-control"></td>
+                            <td><input type="text" name="name"  placeholder="Name" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Category</td>
                             <td>
-                                <select name="category_id" class="form-control" required>
+                                <select name="category_id" class="form-control" >
                                     <option value="0">&mdash;</option>
                                     @foreach ($category as $c)
                                         <option value="{{ $c->id }}">{{ $c->name }}</option>
@@ -35,11 +39,11 @@
                         </tr>
                         <tr>
                             <td>Images</td>
-                            <td><input type="file" name="photo" class="form-control" required></td>
+                            <td><input type="file" name="images" class="form-control" ></td>
                         </tr>
                         <tr>
                             <td>Description</td>
-                            <td><textarea name="description" required class="form-control" cols="30" rows="10"></textarea></td>
+                            <td><textarea name="description"  class="form-control" cols="30" rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>

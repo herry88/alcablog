@@ -43,6 +43,7 @@ class CategoryController extends Controller
         $d = New Category;
         $d->name = $request->name;
         $d->save();
+        
         // Alert::message('Thanks for comment!')->persistent('Close');
 
         return redirect()->route('category.index')->withSuccess('success');

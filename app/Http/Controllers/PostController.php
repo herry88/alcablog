@@ -30,7 +30,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $category = Category::get();
+        $category = Category::orderBy('name', 'ASC')->get();
         return view('post.create', \compact('category'));
     }
 
@@ -44,14 +44,17 @@ class PostController extends Controller
     {
         $this->validate($request,[
             'name'=>'required',
-            'file'=>'required',
+            'category_id'=>'required',
+            'images' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
             'description'=>'required'
         ]);
 
+        // echo 'gw ganteng';
+       
         try{
             $photo = null;
-            if($request->hasFile('photo')){
-                $photo = $this->saveFile($request->name, $request->file('photo'));
+            if($request->hasFile('images')){
+                $photo = $this->saveFile($request->name, $request->file('images'));
             }
 
             //simpan data ke dalam table products
@@ -62,10 +65,11 @@ class PostController extends Controller
                 'description'=> $request->description
             ]);
             dd($post);
-            // return \redirect(route('post.index'))->withSuccess('Berhasil', $request->name);
+            return \redirect(route('post.index'))->withSuccess('Berhasil', $request->name);
         } catch(\Exception $e ){
-            // return \redirect()->back()->with(['error' => $e->getMessage()]);
+            return \redirect()->back()->with(['error' => $e->getMessage()]);
         }
+
     }
 
     private function saveFile($name, $photo)
