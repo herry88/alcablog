@@ -24,11 +24,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	</script>
 
 	<!-- Bootstrap Core CSS -->
-	<link href="{{URL::asset('assets/css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
+	<link href="{{URL::asset('public/assets/css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
 	<!-- Custom CSS -->
-	<link href="{{URL::asset('assets/css/style.css')}}" rel='stylesheet' type='text/css' />
+	<link href="{{URL::asset('public/assets/css/style.css')}}" rel='stylesheet' type='text/css' />
 	<!-- font-awesome icons -->
-	<link href="{{URL::asset('assets/css/fontawesome-all.min.css')}}" rel="stylesheet">
+	<link href="{{URL::asset('public/assets/css/fontawesome-all.min.css')}}" rel="stylesheet">
 	<!-- //Custom Theme files -->
 	<!--webfonts-->
 	<link href="//fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
@@ -100,7 +100,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="row abbot-main py-lg-5 py-4">
 					<div class="col-lg-6 abbot-right">
 						<span></span>
-						<img src="{{URL::asset('assets/images/slide.png')}}" class="img-fluid" alt="" />
+						<img src="{{URL::asset('public/assets/images/slide.png')}}" class="img-fluid" alt="" />
 					</div>
 					<div class="col-lg-6 about-text-grid">
 						<h3 class="stat-title">about us
@@ -216,7 +216,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							</ul>
 						</div>
 						<div class="col-lg-4 grad_video my-lg-auto mt-5">
-							<img src="{{URL::asset('assets/images/i1.png')}}" class="img-fluid" alt="" />
+							<img src="{{URL::asset('public/assets/images/i1.png')}}" class="img-fluid" alt="" />
 						</div>
 					</div>
 				</div>
@@ -275,7 +275,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<h5>loremipsum dummy text</h5>
 								<p>Some text here</p>
 								<div class="team-img">
-									<img src="{{URL::asset('assets/images/b1.png')}}" alt="" class="img-fluid">
+									<img src="{{URL::asset('public/assets/images/b1.png')}}" alt="" class="img-fluid">
 									<div class="team-content">
 										<h4 class="text-white">pretium ut lacinia in</h4>
 									</div>
@@ -296,7 +296,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<h5>loremipsum dummy text</h5>
 								<p>Some text here</p>
 								<div class="team-img">
-									<img src="{{URL::asset('assets/images/b3.png')}}" alt="" class="img-fluid">
+									<img src="{{URL::asset('public/assets/images/b3.png')}}" alt="" class="img-fluid">
 									<div class="team-content">
 										<h4 class="text-white">pretium ut lacinia in</h4>
 									</div>
@@ -317,7 +317,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<h5>loremipsum dummy text</h5>
 								<p>Some text here</p>
 								<div class="team-img">
-									<img src="{{URL::asset('assets/images/b2.png')}}" alt="" class="img-fluid">
+									<img src="{{URL::asset('public/assets/images/b2.png')}}" alt="" class="img-fluid">
 									<div class="team-content">
 										<h4 class="text-white">pretium ut lacinia in</h4>
 									</div>
@@ -356,7 +356,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="row">
 						<div class="col-lg-4">
 							<a href="#">
-								<img class="card-img-bottom" src="{{URL::asset('assets/images/g2.jpg')}}" alt="Card image cap">
+								<img class="card-img-bottom" src="{{URL::asset('public/assets/images/g2.jpg')}}" alt="Card image cap">
 							</a>
 						</div>
 						<div class="col-lg-8 date-grid-agile-right">
@@ -539,10 +539,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- /Footer -->
 	<!-- js-->
-	<script src="{{URL::asset('assets/js/jquery-2.2.3.min.js')}}"></script>
+	<script src="{{URL::asset('public/assets/js/jquery-2.2.3.min.js')}}"></script>
 	<!-- js-->
 	<!-- Scrolling Nav JavaScript -->
-	<script src="{{URL::asset('assets/js/scrolling-nav.js')}}"></script>
+	<script src="{{URL::asset('public/assets/js/scrolling-nav.js')}}"></script>
 	<!-- //fixed-scroll-nav-js -->
 	<script>
 		$(window).scroll(function () {
@@ -554,7 +554,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
 	<!-- Banner text Responsiveslides -->
-	<script src="{{URL::asset('assets/js/responsiveslides.min.js')}}"></script>
+	<script src="{{URL::asset('public/assets/js/responsiveslides.min.js')}}"></script>
 	<script>
 		// You can also use"$(window).load(function() {"
 		$(function () {
@@ -577,8 +577,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	</script>
 	<!-- //Banner text  Responsiveslides adfafadsfdsafa-->
 	<!-- start-smooth-scrolling -->
-	<script src="{{ URL::asset('assets/js/move-top.js') }}"></script>
-	<script src="{{ URL::asset('assets/js/easing.js') }}"></script>
+	<script src="{{ URL::asset('public/assets/js/move-top.js') }}"></script>
+	<script src="{{ URL::asset('public/assets/js/easing.js') }}"></script>
 	<script>
 		jQuery(document).ready(function ($) {
 			$(".scroll").click(function (event) {
@@ -609,10 +609,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 
 		});
 	</script>
-	<script src="{{ URL::asset('assets/js/SmoothScroll.min.js') }}"></script>
+	<script src="{{ URL::asset('public/assets/js/SmoothScroll.min.js') }}"></script>
 	<!-- //smooth-scrolling-of-move-up -->
 	<!-- Bootstrap Core JavaScript -->
-	<script src="{{URL::asset('assets/js/bootstrap.js')}}">
+	<script src="{{URL::asset('public/assets/js/bootstrap.js')}}">
 	</script>
 	<!-- //Bootstrap Core JavaScript -->
 </body>
